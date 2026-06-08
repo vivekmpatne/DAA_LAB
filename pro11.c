@@ -5,9 +5,7 @@ int combo[50];
 void findWays(int coins[], int n, int index, int sum, int target, int size) {
 
     if(sum == target) {
-
         printf("Combination: ");
-
         for(int i = 0; i < size; i++) {
             printf("%d ", combo[i]);
         }
@@ -17,7 +15,6 @@ void findWays(int coins[], int n, int index, int sum, int target, int size) {
 
     if(index == n || sum > target)
         return;
-
     combo[size] = coins[index];
 
     findWays( coins, n, index + 1, sum + coins[index], target, size + 1 );

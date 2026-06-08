@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define MAX 20
-#define INF 9999
+#define INF 999
 
 int main() {
 
