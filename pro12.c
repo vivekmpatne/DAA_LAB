@@ -5,16 +5,11 @@ int camera[20];
 int solutionCount = 0;
 
 int isSafe(int row, int col) {
-
     for(int i = 1; i < row; i++) {
-
-        if(camera[i] == col ||
-           abs(camera[i] - col) == abs(i - row)) {
-
+        if(camera[i] == col || abs(camera[i] - col) == abs(i - row)) {
             return 0;
         }
     }
-
     return 1;
 }
 

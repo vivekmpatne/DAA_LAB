@@ -13,8 +13,8 @@ void findWays(int coins[], int n, int index, int sum, int target, int size) {
         return;
     }
 
-    if(index == n || sum > target)
-        return;
+    if(index == n || sum > target) { return; }  
+    
     combo[size] = coins[index];
 
     findWays( coins, n, index + 1, sum + coins[index], target, size + 1 );

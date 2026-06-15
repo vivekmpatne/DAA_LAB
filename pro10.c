@@ -18,10 +18,8 @@ int main()
 
     printf("Enter cost matrix:\n");
 
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < n; j++)
-        {
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
             scanf("%d", &cost[i][j]);
 
             if(cost[i][j] == 0)
@@ -33,18 +31,13 @@ int main()
 
     printf("\nOptimal Power Grid Connections:\n");
 
-    while(edges < n - 1)
-    {
+    while(edges < n - 1) {
         int min = INF;
 
-        for(int i = 0; i < n; i++)
-        {
-            if(visited[i])
-            {
-                for(int j = 0; j < n; j++)
-                {
-                    if(!visited[j] && cost[i][j] < min)
-                    {
+        for(int i = 0; i < n; i++) {
+            if(visited[i]) {
+                for(int j = 0; j < n; j++) {
+                    if( !visited[j] && cost[i][j] < min ) {
                         min = cost[i][j];
                         x = i;
                         y = j;

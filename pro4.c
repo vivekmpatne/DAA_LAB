@@ -35,7 +35,7 @@ int main(){
     printf("Topological Sort: ");
     while(!isEmpty()){
         int vertex = dequeue();
-        printf("%d ", vertex);
+        printf("Task%d ", vertex);
         for(i = 0; i<n; i++){
             if(adj[vertex][i] == 1){
                 indegree[i]--;
