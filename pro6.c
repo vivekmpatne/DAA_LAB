@@ -19,13 +19,9 @@ int main() {
     printf("Enter value and weight of each item:\n");
 
     for(int i = 0; i < n; i++) {
-        scanf("%d %d",
-              &items[i].value,
-              &items[i].weight);
+        scanf("%d %d", &items[i].value, &items[i].weight);
 
-        ratio[i] =
-            (float)items[i].value /
-            items[i].weight;
+        ratio[i] = (float)items[i].value / items[i].weight;
     }
 
     for(int i = 0; i < n - 1; i++) {
@@ -49,11 +45,8 @@ int main() {
             capacity -= items[i].weight;
             totalValue += items[i].value;
         }
-        else   {
-            totalValue +=
-                items[i].value *
-                (capacity / items[i].weight);
-
+        else  {
+            totalValue += items[i].value * (capacity / items[i].weight) ;
             break;
         }
     }
